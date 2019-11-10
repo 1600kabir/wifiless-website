@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<title>Cache Downloader</title>
+
+	
+
+</head>
+<body>
+<div id="n1">
+	<h1>Linguistic Cache</h1>
+	<h2>About the App</h2>
+	<p>Use the internet without the internet</p>
+	<p>We use Natural Language Processing and Computational Linguistics to predict what you would search based on your previous searches.</p>
+	<p>We then use our predicted phrases as a search key, then save the first website in the cache of your computer, allowing you to make searches without wifi.</p>
+</div>
+<div>
+	<form method="post" enctype="multipart/form-data">
+		<div class='upload_button'>
+					    	{{ upload_form.hidden_tag() }}
+							{{ upload_form.file(class_='upload', id='file-input')}}
+			</div>
+		<button class="upload_button" id='submit'>Submit</button>
+	</form>
+</div>
+<div>
+	<form method="post" enctype="multipart/form-data">
+		{{ save_cache.hidden_tag() }}
+		<button>Load Cached Sites</button>
+	</form>
+</div>
+</body>
+</html>
